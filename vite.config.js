@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
         orbit: resolve(import.meta.dirname, 'orbit.html'),
+        console: resolve(import.meta.dirname, 'console.html'),
       },
     },
   },

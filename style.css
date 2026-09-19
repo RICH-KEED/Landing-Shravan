@@ -807,7 +807,7 @@ body {
 
 /* 2. Center Top: In gap between THREAT & SHIELD, right above aircraft */
 .badge-center-top {
-  top: 23vh;
+  top: 9vh;
   left: 50.5%;
   transform: translateX(-50%);
 }

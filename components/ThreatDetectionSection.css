@@ -28,7 +28,7 @@
 .threat-statement-label span:last-child { color: #8e94a0; font-weight: 500; letter-spacing: .2em; }
 .threat-statement-copy { position: relative; }
 .threat-statement-plus { position: absolute; top: 4px; left: -24px; color: #717682; font: 300 14px/1 'JetBrains Mono', monospace; user-select: none; }
-.threat-statement-copy h2 { margin: 0; color: #ededee; font-size: 24px; font-weight: 400; letter-spacing: -.015em; line-height: 1.28; }
+.threat-statement-copy h2 { margin: 0; color: #ededee; font-size: 18px; font-weight: 400; letter-spacing: -.015em; line-height: 1.28; }
 
 .threat-flow { position: relative; width: 100%; padding: 8px 0 96px; }
 .threat-flow-heading { display: flex; align-items: flex-start; gap: 24px; margin-bottom: 64px; }
@@ -105,7 +105,7 @@
 @media (min-width: 640px) {
   .threat-detection-inner { padding-right: 56px; padding-left: 56px; }
   .threat-statement-plus { left: -36px; }
-  .threat-statement-copy h2 { font-size: 30px; }
+  .threat-statement-copy h2 { font-size: 22px; }
   .threat-flow-heading { gap: 48px; }
   .threat-flow-heading h3 { font-size: 22px; }
   .threat-heading-break { display: inline; }
@@ -116,12 +116,12 @@
   .threat-statement { grid-template-columns: repeat(12, minmax(0, 1fr)); margin-bottom: 128px; }
   .threat-statement-label { grid-column: span 4; }
   .threat-statement-copy { grid-column: span 8; }
-  .threat-statement-copy h2 { font-size: 35.2px; }
+  .threat-statement-copy h2 { font-size: 26px; }
 }
 @media (min-width: 1024px) {
   .threat-detection-inner { padding: 64px 96px; }
   .threat-statement { gap: 32px; }
-  .threat-statement-copy h2 { font-size: 39.2px; }
+  .threat-statement-copy h2 { font-size: 28px; }
   .threat-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
   .threat-card:nth-child(even) { transform: translateY(108px); }
 }

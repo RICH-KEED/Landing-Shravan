@@ -1,0 +1,488 @@
+timestamp,confidence,ssid,bssid,signal_pct,reasons
+2026-09-19T18:12:26,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:26,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:26,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:26,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:29,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:29,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:29,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:29,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:32,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:32,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:32,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:32,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:35,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:35,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:35,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:35,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:39,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:39,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:39,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:39,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:42,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:42,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:42,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:42,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:45,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:45,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:45,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:45,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:48,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:48,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:48,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:48,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:52,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:52,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:52,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:52,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:55,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:55,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:55,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:55,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:58,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:58,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:58,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:12:58,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:01,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:01,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:01,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:02,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:05,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:05,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:05,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:05,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:08,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:08,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:08,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:08,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:11,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:11,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:11,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:11,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:15,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:15,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:15,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:15,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:18,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:18,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:18,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:18,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:21,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:21,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:21,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:21,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:24,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:24,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:24,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:24,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:28,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:28,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:28,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:28,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:31,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:31,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:31,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:31,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:34,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:34,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:34,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:34,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:37,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:37,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:37,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:37,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:41,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:41,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:41,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:41,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:44,unusual,Not Available,9E:E9:48:8B:AA:57,70,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:44,unusual,(hidden),B0:7C:51:8D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:44,unusual,(hidden),B0:7C:51:8D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:13:44,unusual,(hidden),B0:7C:51:4D:88:31,93,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:48,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:14:48,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:48,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:48,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:48,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:51,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:14:51,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:51,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:51,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:51,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:51,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:51,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:51,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:54,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:14:54,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:54,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:54,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:54,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:54,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:54,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:54,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:57,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:14:58,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:58,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:58,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:58,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:58,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:58,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:14:58,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:01,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:01,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:01,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:01,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:01,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:01,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:01,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:01,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:04,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:04,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:04,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:04,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:04,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:04,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:04,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:04,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:07,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:07,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:07,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:08,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:08,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:08,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:08,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:08,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:11,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:11,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:11,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:11,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:11,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:11,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:11,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:11,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:14,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:14,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:14,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:14,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:14,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:14,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:14,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:14,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:17,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:17,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:17,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:18,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:18,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:18,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:18,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:18,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:21,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:21,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:21,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:21,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:21,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:21,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:21,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:21,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:24,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:24,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:24,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:24,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:24,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:24,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:24,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:24,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:27,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:28,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:28,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:28,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:28,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:28,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:28,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:28,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:31,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:31,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:31,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:31,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:31,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:31,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:31,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:31,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:34,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:34,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:34,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:34,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:34,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:34,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:34,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:34,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:37,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:37,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:37,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:37,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:38,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:38,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:38,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:38,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:41,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:41,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:41,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:41,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:41,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:41,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:41,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:41,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:44,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:44,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:44,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:44,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:44,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:44,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:44,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:44,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:47,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:47,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:48,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:48,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:48,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:48,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:48,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:48,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:51,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:51,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:51,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:51,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:51,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:51,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:51,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:51,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:54,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:54,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:54,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:54,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:54,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:54,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:54,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:54,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:58,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:15:58,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:58,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:58,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:58,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:58,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:58,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:15:58,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:01,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:16:01,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:01,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:01,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:01,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:01,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:01,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:01,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:04,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:16:04,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:04,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:04,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:04,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:04,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:04,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:04,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:08,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:16:08,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:08,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:08,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:08,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:08,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:08,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:08,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:11,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:16:11,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:11,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:11,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:11,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:11,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:11,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:11,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:14,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:16:14,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:14,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:14,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:14,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:14,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:14,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:14,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:18,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:16:18,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:18,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:18,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:18,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:18,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:18,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:18,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:21,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:16:21,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:21,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:21,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:21,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:21,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:21,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:21,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:24,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:16:25,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:25,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:25,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:25,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:25,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:25,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:25,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:28,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:16:28,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:28,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:28,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:28,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:28,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:28,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:28,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:31,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:16:31,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:31,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:31,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:31,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:31,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:31,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:31,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:35,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:16:35,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:35,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:35,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:35,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:35,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:35,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:35,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:38,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:16:38,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:38,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:38,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:38,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:38,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:38,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:38,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:42,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:16:42,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:42,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:42,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:42,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:42,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:42,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:42,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:45,high,IOT,2E:5F:BC:D1:7A:D6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:16:45,unusual,Not Available,9E:E9:48:8B:AA:57,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:45,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:45,unusual,Divye Chawla,3E:CC:9C:F4:AC:75,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:45,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:45,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:45,unusual,aksg,CA:4E:C3:23:1C:19,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:45,unusual,(hidden),B0:7C:51:4D:88:31,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:48,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,60,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:48,unusual,skd,AA:0B:DA:05:15:92,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:16:48,unusual,Hitesh's S24 FE,96:2A:73:62:6A:5B,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:22:53,high,IOT,2E:5F:BC:D1:7A:D6,86,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:22:53,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,75,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:22:53,unusual,(hidden),B0:7C:51:8D:87:D1,82,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:32:55,high,IOT,2E:5F:BC:D1:7A:D6,67,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:32:55,unusual,(hidden),B0:7C:51:4D:87:D1,72,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:32:55,unusual,(hidden),B0:7C:51:8D:87:D1,72,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:34:28,unusual,(hidden),B0:7C:51:8D:87:21,72,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:34:28,unusual,(hidden),B0:7C:51:4D:87:21,67,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:34:28,unusual,(hidden),92:03:2E:C9:9F:09,38,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:34:28,unusual,(hidden),B0:7C:51:4D:85:41,33,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:34:28,unusual,(hidden),B0:7C:51:4D:88:31,87,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:34:28,unusual,NET+Roaming,92:03:2E:B9:9F:09,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:34:28,unusual,aksg,CA:4E:C3:23:1C:19,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:34:31,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,high,IOT,2E:5F:BC:D1:7A:D6,70,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T18:36:15,unusual,(hidden),B0:7C:51:8D:85:41,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,unusual,(hidden),B0:7C:51:8D:87:21,72,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,unusual,(hidden),B0:7C:51:4D:87:21,53,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,unusual,(hidden),92:03:2E:C9:9F:09,14,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,unusual,(hidden),B0:7C:51:4D:85:41,33,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,unusual,(hidden),B0:7C:51:4D:87:D1,80,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,unusual,(hidden),B0:7C:51:8D:87:D1,78,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,unusual,(hidden),B0:7C:51:4D:88:31,85,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,unusual,BOB 0760,FE:3D:C6:D8:2E:14,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,unusual,NET+Roaming,92:03:2E:B4:0E:49,18,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,unusual,NET+Roaming,92:03:2E:B9:B8:09,18,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,unusual,NET+Roaming,92:03:2E:B9:9F:09,29,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,unusual,20 4G,90:03:2E:94:0E:49,18,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,85,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T18:36:15,unusual,aksg,CA:4E:C3:23:1C:19,78,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:16:27,unusual,(hidden),92:03:2E:C4:07:F9,50,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:16:27,unusual,22 4G,90:03:2E:99:9F:09,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:04,high,IOT,2E:5F:BC:D1:7A:D6,80,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-19T21:17:04,unusual,DIRECT-ROANIMESHmsUS,2A:0C:50:0F:32:78,22,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:04,unusual,(hidden),B0:7C:51:8D:87:21,62,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:04,unusual,(hidden),B0:7C:51:8D:87:D1,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:04,unusual,(hidden),B0:7C:51:4D:87:21,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:04,unusual,(hidden),B0:7C:51:4D:87:D1,35,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:04,unusual,(hidden),B0:7C:51:4D:88:31,86,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:04,unusual,sk,E6:21:ED:99:A7:EE,43,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:04,unusual,T3x,B2:3C:DC:AC:5D:5E,40,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:04,unusual,aksg,CA:4E:C3:23:1C:19,90,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:04,unusual,zooop,B6:77:55:E1:16:D8,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:04,unusual,SourabhSagar,CE:48:DB:DB:85:F6,88,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:04,unusual,CE6,46:9F:1C:85:49:E1,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:04,unusual,Parag's A35,D2:35:78:4B:31:DA,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:57,unusual,oplus_co_apzmye,FE:3B:54:62:72:BD,46,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-19T21:17:57,unusual,S24 ULTRA,76:E1:E1:71:3C:42,46,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:03,high,IOT,2E:5F:BC:D1:7A:D6,92,SSID does not match common phone/router/printer/TV/laptop naming patterns; SSID contains a drone/IoT-style keyword ('IOT')
+2026-09-20T00:17:03,unusual,A,1E:F0:B8:28:B7:EC,26,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:03,unusual,Not Available,46:97:17:8F:D5:F9,57,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:03,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,75,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:03,unusual,sk,E6:21:ED:99:A7:EE,53,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:03,unusual,Ayush's S24 FE,D2:C7:07:3B:49:FE,43,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:03,unusual,NET+Roaming,92:03:2E:B9:B8:49,29,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:03,unusual,10 4G,90:03:2E:99:B8:49,26,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:03,unusual,xoxoxo,EE:70:95:6C:F4:C0,35,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:03,unusual,zooop,B6:77:55:E1:16:D8,80,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:03,unusual,Abhi,6E:86:56:63:99:FA,85,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:03,unusual,Mayank,5A:7F:9F:ED:AA:0A,80,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:04,unusual,Pratik,9E:A0:03:16:ED:13,82,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:04,unusual,(hidden),B0:7C:51:4D:88:31,88,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:04,unusual,(hidden),B0:7C:51:4D:87:D1,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:04,unusual,(hidden),B0:7C:51:8D:87:D1,57,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:04,unusual,(hidden),B0:7C:51:8D:87:21,62,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:04,unusual,Roshan Kumar's M35,D2:33:67:01:9B:35,78,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:04,unusual,Shaurya's S25,4E:4D:38:B8:86:E7,57,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:04,unusual,Nothing Phone (3a) Pro,EE:DF:D3:07:26:B8,50,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:04,unusual,aksg,CA:4E:C3:23:1C:19,75,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:04,unusual,skd,B6:D3:95:8F:92:64,22,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:04,unusual,CMF BY NOTHING Phone 1_8850,26:C3:98:5D:E5:CA,85,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:04,unusual,Rohit Jandial,EA:A9:5E:38:4A:13,31,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:17:11,unusual,Richa,F2:49:C5:13:26:35,43,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:18:14,unusual,KUMAR'S LAPTOP,1E:CE:51:24:A0:4B,16,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:18:22,unusual,(hidden),B0:7C:51:8D:85:41,24,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:18:37,unusual,Rohit Jandial,EA:A9:5E:38:4A:13,22,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:18:37,unusual,iQOO Neo 9 Pro,5A:93:42:62:B0:F9,82,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:19:39,unusual,oplus_co_apzmye,52:DE:A9:AC:B0:A6,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:19:47,unusual,Pratik,9E:A0:03:16:ED:13,24,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:20:43,unusual,No Internet Access,76:3A:F4:F4:2A:09,20,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:21:08,unusual,(hidden),B0:7C:51:8D:85:41,33,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:21:41,unusual,(hidden),B0:7C:51:4D:87:21,75,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:21:41,unusual,(hidden),B0:7C:51:4D:87:D1,72,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:24:03,unusual,motorola edge,E6:B6:CC:B5:03:EA,65,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:24:03,unusual,KUMAR'S LAPTOP,1E:CE:51:24:A0:4B,26,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:33:53,unusual,(hidden),B0:7C:51:4D:88:31,91,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:33:53,unusual,(hidden),B0:7C:51:8D:88:31,89,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:33:53,unusual,CMF BY NOTHING Phone 1_8850,26:C3:98:5D:E5:CA,87,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:33:53,unusual,aksg,CA:4E:C3:23:1C:19,85,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:33:53,unusual,motoedge50fusion_9490,F2:C2:DA:B7:CF:55,92,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:34:01,unusual,Krishna's phone,AA:C3:7C:CA:2D:CF,43,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:34:01,unusual,(hidden),B0:7C:51:4D:87:D1,83,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:34:01,unusual,Rohit Jandial,EA:A9:5E:38:4A:13,26,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:34:17,unusual,Gaurav v,66:9E:02:E0:0B:60,29,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:34:32,unusual,xoxoxo,EE:70:95:6C:F4:C0,81,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:34:40,unusual,A,1E:F0:B8:28:B7:EC,20,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:34:56,unusual,(hidden),92:03:2E:C7:AF:79,20,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:35:33,unusual,(hidden),B0:7C:51:8D:85:41,24,SSID does not match common phone/router/printer/TV/laptop naming patterns
+2026-09-20T00:35:33,unusual,sk,E6:21:ED:99:A7:EE,65,SSID does not match common phone/router/printer/TV/laptop naming patterns

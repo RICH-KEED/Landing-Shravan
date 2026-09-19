@@ -9,9 +9,10 @@ function initThreatShield() {
   const closeDemoBtn = document.getElementById('closeDemoBtn');
   const demoForm = document.getElementById('demoForm');
 
-  if (openDemoBtn && demoModal) {
+  // "Open Console" navigates to the field console page
+  if (openDemoBtn) {
     openDemoBtn.addEventListener('click', () => {
-      demoModal.showModal();
+      window.location.href = 'console.html';
     });
   }
 
@@ -39,12 +40,12 @@ function initThreatShield() {
       submitBtn.innerHTML = '<span>DISPATCHING BRIEFING...</span>';
       submitBtn.style.opacity = '0.7';
       setTimeout(() => {
-        submitBtn.innerHTML = '<span>CONFIRMED ✓ ACCESS ISSUED</span>';
+        submitBtn.innerHTML = '<span>CONFIRMED ✓ BRIEFING SCHEDULED</span>';
         submitBtn.style.background = '#22c55e';
         submitBtn.style.color = '#ffffff';
         setTimeout(() => {
           if (demoModal) demoModal.close();
-          submitBtn.innerHTML = '<span>REQUEST ACCESS NOW</span><span class="submit-arrow">→</span>';
+          submitBtn.innerHTML = '<span>REQUEST BRIEFING</span><span class="submit-arrow">→</span>';
           submitBtn.style.background = '';
           submitBtn.style.color = '';
           demoForm.reset();
@@ -313,7 +314,7 @@ function initThreatShield() {
   setInterval(() => {
     counter++;
     if (counter % 12 === 0) {
-      uptimeVal.textContent = '99.999%';
+      uptimeVal.textContent = '94.2%';
     }
   }, 4000);
 
@@ -526,16 +527,16 @@ function initThreatShield() {
 
     const stepData = [
       {
-        title: 'To clone patterns anomalies digital culture. Language synergy.',
-        desc: 'Our global sensor network tracks emerging threats the moment they surface, correlating signals across continents before they reach your perimeter.',
+        title: 'A belief state for every band, built from what was actually heard.',
+        desc: 'Each dwell records hits, misses, confidence and timing per frequency band. Repeated observations let the temporal-learning layer estimate recurrence and approximate periodicity — with no future ground truth.',
       },
       {
-        title: 'Automated quarantine across distributed edge nodes.',
-        desc: 'Isolate compromised endpoints and revoke malicious credentials in sub-second response times without disrupting operational workflows.',
+        title: 'Predict the next opportunity, then pick the highest-value dwell.',
+        desc: 'The prediction engine estimates when and where activity recurs. The Smart Scheduler scores candidate bands on predicted activity, current belief, recency, periodicity, staleness and exploration — and explains every choice via “Why This Band?”.',
       },
       {
-        title: 'Continuous compliance verification and audit telemetry.',
-        desc: 'Audit-ready telemetry generated in real time mapped to SOC 2, ISO 27001, and GDPR standards with tamper-evident cryptographic proofs.',
+        title: 'Listen, update, and relearn when the pattern goes stale.',
+        desc: 'Confidence decays when predictions stop paying off, so exploration revisits uncertain regions. If the emitter hops, SHRAVAN discovers the new band, updates its belief and issues a fresh prediction.',
       },
     ];
 
@@ -682,7 +683,7 @@ function initThreatShield() {
 
     if (!rows.length) return;
 
-    const stages = ['01_DETECT', '02_CONTAIN', '03_REPORT'];
+    const stages = ['01_OBSERVE', '02_PREDICT', '03_EXPLORE'];
     let activeIdx = 0;
 
     const updateBeacon = (idx) => {
@@ -872,16 +873,16 @@ function initThreatShield() {
 
     const testimonials = [
       {
-        name: 'HAYSRE',
-        role: 'CEO AT STACK3D LAB',
+        name: 'SHRAVAN',
+        role: 'SIH26055 // SMART SCAN STRATEGY FOR ELECTRONIC WARFARE',
         avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD-MkdBcGp5pqPQzUak4LR3OJvQL5YoE-Z5kMUic0yJyfyvUBu1IadixRjoA6vhxAdOc33X3Pvb0nWs-eepLQzUtUP1crM6NtNQd6jLy8ewb0nrYily8ZlgmdQ1aLl9yGUs4mOYDE6qeu4KimA8ZxMFTPRZSW3tmRrWqVIKZUZHQa9dx7to5uQMihm2MgrurYDKjDT8QD_F_Vog4MQkdtIEx8UGHFKbCZvrf6BgMP3ksrT4ecSY0cul',
-        quote: "Before Threat Shield, our security team was reactive — chasing alerts after the damage was already done. Now threats get contained in seconds, and our compliance reports are audit-ready without weeks of manual prep. It's the first platform our CISO actually trusts to run unattended overnight.",
+        quote: "A signal appears, the receiver observes or misses it, SHRAVAN remembers the observation, learns its behaviour, predicts the next opportunity, chooses where to listen, intercepts activity, detects when the learned pattern becomes stale, explores again and relearns.",
       },
       {
-        name: 'ELENA VANCE',
-        role: 'HEAD OF INFRASTRUCTURE AT CYBERSYNC',
+        name: 'FIELD MODE',
+        role: 'PASSIVE RECEIVE-ONLY SDR // DRONE SCENARIO',
         avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD-MkdBcGp5pqPQzUak4LR3OJvQL5YoE-Z5kMUic0yJyfyvUBu1IadixRjoA6vhxAdOc33X3Pvb0nWs-eepLQzUtUP1crM6NtNQd6jLy8ewb0nrYily8ZlgmdQ1aLl9yGUs4mOYDE6qeu4KimA8ZxMFTPRZSW3tmRrWqVIKZUZHQa9dx7to5uQMihm2MgrurYDKjDT8QD_F_Vog4MQkdtIEx8UGHFKbCZvrf6BgMP3ksrT4ecSY0cul',
-        quote: "Autonomous perimeter defence that actually delivers on its zero-latency promise. During peak stress loads, Threat Shield quarantined rogue vectors without degrading line throughput for genuine client traffic.",
+        quote: "The antenna/SDR captures IQ samples, DSP runs FFT/PSD analysis, and frequency, power, bandwidth, duration and temporal behaviour feed the same belief, prediction and scheduling loop. A Wi-Fi peak is never labelled 'the drone' by itself — controlled drone-off/drone-on measurements characterise and validate the target's RF signature.",
       },
     ];
 

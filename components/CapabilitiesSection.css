@@ -64,7 +64,7 @@
 .capabilities-intro h2 {
   margin: 0;
   color: #fff;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: -.025em;
   line-height: 1.18;
@@ -167,7 +167,7 @@
 
 @media (min-width: 640px) {
   .capabilities-inner { padding: 80px 32px; }
-  .capabilities-intro h2 { font-size: 36px; }
+  .capabilities-intro h2 { font-size: 26px; }
   .capability-card { padding: 32px; }
   .capability-card h3 { font-size: 21.6px; }
 }
@@ -175,7 +175,7 @@
   .capabilities-header { margin-bottom: 16px; }
   .capabilities-tag, .capabilities-learn { font-size: 14px; }
   .capabilities-intro { margin-bottom: 80px; }
-  .capabilities-intro h2 { font-size: 45.6px; }
+  .capabilities-intro h2 { font-size: 30px; }
   .capabilities-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .capability-card p { font-size: 14.8px; }
 }

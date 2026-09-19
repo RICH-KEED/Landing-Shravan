@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHRAVAN — Field Console</title>
+  <meta name="description" content="SHRAVAN field console: passive Wi-Fi drone detector and YOLOv8 camera detector, side by side.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="console.css">
+</head>
+<body class="console-body">
+  <!-- Atmospheric Grid & Lighting (shared with landing) -->
+  <div class="cyber-canvas">
+    <div class="cross-grid"></div>
+    <div class="ambient-glow"></div>
+    <div class="ambient-glow-cyan"></div>
+    <div class="scanline-overlay"></div>
+  </div>
+
+  <div class="console-shell">
+    <!-- Header -->
+    <header class="console-header">
+      <a class="btn-demo console-back" href="index.html">
+        <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M9.5 2.5L2.5 9.5M2.5 9.5H8M2.5 9.5V4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Landing</span>
+      </a>
+
+      <div class="console-title-block">
+        <div class="console-kicker"><span>//</span><span>FIELD CONSOLE</span></div>
+        <h1 class="console-title">SHRAVAN</h1>
+        <p class="console-sub">Passive drone sensing — Wi-Fi beacons and YOLOv8 vision, side by side.</p>
+      </div>
+
+      <div class="console-status">
+        <div class="console-status-line"><span class="sq-bullet">■</span> mode: <span class="text-white">RX-ONLY</span></div>
+        <div class="console-status-line text-dim">clock: <span class="text-white" id="consoleClock">--:--:--</span></div>
+        <div class="console-status-line text-dim">channels: <span class="text-white">2/2</span> online</div>
+      </div>
+    </header>
+
+    <!-- Panels -->
+    <main class="console-grid">
+      <!-- ================= Wi-Fi Detector ================= -->
+      <section class="console-panel" id="wifiPanel" aria-label="Wi-Fi drone detector">
+        <header class="panel-head">
+          <div class="panel-head-left">
+            <span class="panel-num">01</span>
+            <div>
+              <div class="panel-kicker"><span>//</span><span>WI-FI DETECTOR</span></div>
+              <h2 class="panel-title">Beacon Scan</h2>
+              <p class="panel-src">drone_wifi_detector.py · netsh wlan show networks</p>
+            </div>
+          </div>
+          <div class="panel-live"><span class="panel-live-dot" id="wifiLiveDot"></span><span id="wifiLiveLabel">STATIC LOG</span></div>
+        </header>
+
+        <div class="stat-row">
+          <div class="stat-tile"><span class="stat-label">SCANS</span><span class="stat-value" id="wifiScans">—</span></div>
+          <div class="stat-tile stat-high"><span class="stat-label">HIGH CONF</span><span class="stat-value" id="wifiHigh">—</span></div>
+          <div class="stat-tile stat-unusual"><span class="stat-label">UNUSUAL</span><span class="stat-value" id="wifiUnusual">—</span></div>
+          <div class="stat-tile"><span class="stat-label">UNIQUE BSSID</span><span class="stat-value" id="wifiUnique">—</span></div>
+        </div>
+
+        <div class="chart-block">
+          <div class="chart-head">
+            <span>HITS PER SCAN</span>
+            <span class="chart-legend"><i class="lg lg-high"></i>high <i class="lg lg-unusual"></i>unusual</span>
+          </div>
+          <canvas id="wifiChart" class="chart-canvas" height="72" aria-label="Hits per scan over time"></canvas>
+          <div class="chart-axis"><span id="wifiT0">—</span><span id="wifiT1">—</span></div>
+        </div>
+
+        <div class="table-toolbar">
+          <div class="filter-group" id="wifiFilters" role="group" aria-label="Confidence filter">
+            <button type="button" class="selector-btn active" data-filter="all">ALL</button>
+            <button type="button" class="selector-btn" data-filter="high">HIGH</button>
+            <button type="button" class="selector-btn" data-filter="unusual">UNUSUAL</button>
+          </div>
+          <span class="table-meta" id="wifiLatest">latest scan: —</span>
+        </div>
+
+        <div class="table-wrap">
+          <table class="det-table" id="wifiTable">
+            <thead>
+              <tr><th>CONF</th><th>SSID</th><th>BSSID</th><th>SIGNAL</th><th>LAST SEEN</th><th>HITS</th></tr>
+            </thead>
+            <tbody id="wifiTbody"></tbody>
+          </table>
+          <div class="table-empty" id="wifiEmpty" hidden>No rows — run the detector with <code>--log</code> and point the source below at the file.</div>
+        </div>
+
+        <div class="reason-strip" id="wifiReason">Select a row to see why it was flagged.</div>
+
+        <footer class="panel-foot">
+          <label class="src-field">
+            <span>LOG SOURCE</span>
+            <input type="text" id="wifiSrc" value="data/detections.csv" spellcheck="false">
+          </label>
+          <button type="button" class="selector-btn" id="wifiReload">RELOAD</button>
+          <button type="button" class="selector-btn" id="wifiAuto" aria-pressed="false">AUTO 5s</button>
+        </footer>
+      </section>
+
+      <!-- ================= Camera Detector ================= -->
+      <section class="console-panel" id="camPanel" aria-label="YOLOv8 camera drone detector">
+        <header class="panel-head">
+          <div class="panel-head-left">
+            <span class="panel-num">02</span>
+            <div>
+              <div class="panel-kicker"><span>//</span><span>CAMERA DETECTOR</span></div>
+              <h2 class="panel-title">YOLOv8 Vision</h2>
+              <p class="panel-src">drone_camera_detector.py · ultralytics</p>
+            </div>
+          </div>
+          <div class="panel-live"><span class="panel-live-dot" id="camLiveDot"></span><span id="camLiveLabel">NO FEED</span></div>
+        </header>
+
+        <div class="feed-wrap" id="feedWrap">
+          <img id="feedImg" class="feed-img" alt="Live camera feed" hidden>
+          <div class="feed-placeholder" id="feedPlaceholder">
+            <div class="reticle" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="feed-placeholder-text">
+              <span class="cmd-prompt">$ python drone_camera_detector.py --url 1 --serve 8090</span>
+              <span class="text-dim">Start the detector with --serve, then press CONNECT to mirror its annotated feed here.</span>
+            </div>
+          </div>
+          <div class="feed-corner feed-corner-tl" id="feedInfo">SRC: —</div>
+          <div class="feed-corner feed-corner-tr" id="feedFps">—</div>
+          <div class="feed-corner feed-corner-bl">CLASS: <span class="text-white">drone</span></div>
+          <div class="feed-corner feed-corner-br" id="feedLast">last hit: —</div>
+        </div>
+
+        <div class="chip-row">
+          <div class="chip"><span>MODEL</span><b>drone_yolov8x_best.pt</b></div>
+          <div class="chip"><span>ARCH</span><b>YOLOv8x</b></div>
+          <div class="chip"><span>CONF</span><b>0.25</b></div>
+          <div class="chip"><span>FALLBACK</span><b>yolov8n.pt</b></div>
+        </div>
+
+        <div class="stat-row stat-row-3">
+          <div class="stat-tile stat-high"><span class="stat-label">DETECTIONS</span><span class="stat-value" id="camCount">—</span></div>
+          <div class="stat-tile"><span class="stat-label">AVG CONF</span><span class="stat-value" id="camAvg">—</span></div>
+          <div class="stat-tile"><span class="stat-label">PEAK CONF</span><span class="stat-value" id="camPeak">—</span></div>
+        </div>
+
+        <div class="table-toolbar">
+          <span class="table-meta">DETECTION LOG</span>
+          <span class="table-meta" id="camLatest">—</span>
+        </div>
+
+        <div class="table-wrap table-wrap-short">
+          <table class="det-table" id="camTable">
+            <thead><tr><th>TIME</th><th>CLASS</th><th>CONF</th><th>BOX (x1 y1 x2 y2)</th></tr></thead>
+            <tbody id="camTbody"></tbody>
+          </table>
+          <div class="table-empty" id="camEmpty">No detections yet — connect to a running detector (<code>--serve 8090</code>); flagged drones will stream in here.</div>
+        </div>
+
+        <footer class="panel-foot">
+          <label class="src-field">
+            <span>DETECTOR URL (--serve)</span>
+            <input type="text" id="camUrl" value="http://127.0.0.1:8090" spellcheck="false">
+          </label>
+          <button type="button" class="selector-btn" id="camConnect">CONNECT</button>
+          <button type="button" class="selector-btn" id="camDisconnect">DISCONNECT</button>
+        </footer>
+      </section>
+    </main>
+
+    <footer class="console-footer">
+      <span>// SHRAVAN_FIELD_v1.0</span>
+      <span>WIFI_BEACON + YOLO_VISION → BELIEF_LOOP</span>
+      <span>A Wi-Fi peak alone is never labelled “the drone” — vision confirms.</span>
+    </footer>
+  </div>
+
+  <script src="console.js"></script>
+</body>
+</html>

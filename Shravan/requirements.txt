@@ -1,0 +1,16 @@
+# SHRAVAN field detectors
+#
+# drone_wifi_detector.py and hotspot_manager.py are stdlib-only (Windows 10/11).
+# The lines below are for drone_camera_detector.py.
+#
+# GPU (recommended, e.g. RTX 5070 — Blackwell needs the CUDA 12.8 wheels):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+#   pip install -r requirements.txt
+#
+# CPU only:
+#   pip install -r requirements.txt
+
+ultralytics>=8.3
+opencv-python>=4.10
+numpy
+pygrabber          # DirectShow device-name lookup for --url droidcam (Windows)

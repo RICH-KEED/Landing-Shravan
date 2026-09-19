@@ -1,30 +1,50 @@
-# Dependencies
+# ---------- Node / Vite ----------
 node_modules/
-
-# Build output
 dist/
+.vite/
+.cache/
+.parcel-cache/
 
-# Environment variables
+# ---------- Environment ----------
 .env
 .env.local
 .env.*.local
 
-# Editor & IDE
+# ---------- Python (Shravan/ detectors) ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+runs/                      # ultralytics output dirs
+
+# Model weights & partial downloads — too large for GitHub (drone_yolov8x_best.pt is 137 MB).
+# See README.md → "Model weights" for where to download them.
+*.pt
+*.pth
+*.onnx
+*_openvino_model/
+*.part
+.*.part
+
+# Live logs written by the detectors during a run (the committed Shravan/detections.csv
+# and public/data/detections.csv are the demo snapshot, keep those).
+Shravan/camera_detections.csv
+
+# ---------- Editor & IDE ----------
 .vscode/
 .idea/
+.kilo/
 *.swp
 *.swo
 *~
 
-# OS files
+# ---------- OS ----------
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Logs
+# ---------- Logs ----------
 *.log
 npm-debug.log*
-
-# Cache
-.cache/
-.parcel-cache/
