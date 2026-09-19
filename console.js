@@ -1,9 +1,9 @@
 /**
  * SHRAVAN — Field Console
  * Renders two passive sensing channels:
- *   01  Wi-Fi beacon detector  (drone_wifi_detector.py --log  → timestamp,confidence,ssid,bssid,signal_pct,reasons)
+ *   01  Wi-Fi beacon detector  (drone_wifi_detector.py --serve PORT → /detections.json; CSV snapshot as fallback)
  *   02  YOLOv8 camera detector (drone_camera_detector.py --serve PORT → /video MJPEG + /detections.json)
- * Channel 01 reads a CSV log (static snapshot or a live-written file); channel 02 talks to the running detector.
+ * Both panels poll their running detector over HTTP; panel 01 shows the committed CSV snapshot until one is reachable.
  */
 (function initConsole() {
   const $ = (id) => document.getElementById(id);
@@ -62,37 +62,69 @@
 
   // ---------------------------------------------------------------
   // 01 — Wi-Fi detector
+  //   Live:     drone_wifi_detector.py --serve PORT → GET <base>/detections.json
+  //             { scan_count, last_scan, networks_now, devices[], history[] }
+  //   Fallback: the committed CSV snapshot (data/detections.csv) until a
+  //             detector is reachable.
   // ---------------------------------------------------------------
+  const SNAPSHOT_CSV = 'data/detections.csv';
+  const emptyWifiModel = () => ({ devices: [], history: [], scanCount: 0, lastScan: null, networksNow: null });
   const wifi = {
-    rows: [],
+    model: emptyWifiModel(),
     filter: 'all',
     selectedKey: null,
-    autoTimer: null,
+    base: '',
+    pollTimer: null,
+    connected: false,
   };
 
   const wifiDot = $('wifiLiveDot');
   const wifiLabel = $('wifiLiveLabel');
 
-  const aggregateWifi = (rows) => {
-    // One entry per BSSID (fallback SSID), keeping the latest sighting + hit count.
+  // CSV rows → same shape the live endpoint returns.
+  const modelFromCSV = (rows) => {
     const byKey = new Map();
+    const scans = new Map();
     for (const r of rows) {
       const key = r.bssid || r.ssid;
+      const conf = r.confidence === 'high' ? 'high' : 'unusual';
       const cur = byKey.get(key);
-      if (!cur) byKey.set(key, { ...r, hits: 1, first: r.timestamp });
-      else {
+      if (!cur) {
+        byKey.set(key, { ...r, confidence: conf, hits: 1, first_seen: r.timestamp, last_seen: r.timestamp });
+      } else {
         cur.hits += 1;
-        if (r.timestamp >= cur.timestamp) Object.assign(cur, r, { hits: cur.hits, first: cur.first });
-        if (r.confidence === 'high') cur.confidence = 'high';
+        if (r.timestamp >= cur.last_seen) {
+          Object.assign(cur, { ssid: r.ssid, signal_pct: r.signal_pct, reasons: r.reasons, last_seen: r.timestamp });
+        }
+        if (conf === 'high') cur.confidence = 'high';
       }
+      const sc = scans.get(r.timestamp) || { timestamp: r.timestamp, high: 0, unusual: 0 };
+      sc[conf] += 1;
+      scans.set(r.timestamp, sc);
     }
-    return [...byKey.values()].sort((a, b) => {
-      if (a.confidence !== b.confidence) return a.confidence === 'high' ? -1 : 1;
-      return b.timestamp.localeCompare(a.timestamp);
-    });
+    const history = [...scans.values()].sort((a, b) => a.timestamp.localeCompare(b.timestamp));
+    return {
+      devices: [...byKey.values()],
+      history,
+      scanCount: history.length,
+      lastScan: history.length ? history[history.length - 1].timestamp : null,
+      networksNow: null,
+    };
   };
 
-  const drawWifiChart = (rows) => {
+  const modelFromLive = (snap) => ({
+    devices: (snap.devices || []).map((d) => ({
+      ...d,
+      confidence: d.confidence === 'high' ? 'high' : 'unusual',
+      reasons: Array.isArray(d.reasons) ? d.reasons.join('; ') : (d.reasons || ''),
+    })),
+    history: snap.history || [],
+    scanCount: snap.scan_count || 0,
+    lastScan: snap.last_scan || null,
+    networksNow: snap.networks_now ?? null,
+  });
+
+  const drawWifiChart = (history) => {
     const canvas = $('wifiChart');
     if (!canvas) return;
     const dpr = window.devicePixelRatio || 1;
@@ -102,23 +134,14 @@
     ctx.scale(dpr, dpr);
     ctx.clearRect(0, 0, W, H);
 
-    // Bucket by scan timestamp.
-    const scans = new Map();
-    for (const r of rows) {
-      const s = scans.get(r.timestamp) || { high: 0, unusual: 0 };
-      s[r.confidence === 'high' ? 'high' : 'unusual'] += 1;
-      scans.set(r.timestamp, s);
-    }
-    const keys = [...scans.keys()].sort();
-    $('wifiT0').textContent = keys.length ? timeOnly(keys[0]) : '—';
-    $('wifiT1').textContent = keys.length ? timeOnly(keys[keys.length - 1]) : '—';
-    if (!keys.length) return;
+    $('wifiT0').textContent = history.length ? timeOnly(history[0].timestamp) : '—';
+    $('wifiT1').textContent = history.length ? timeOnly(history[history.length - 1].timestamp) : '—';
+    if (!history.length) return;
 
-    const max = Math.max(1, ...keys.map((k) => scans.get(k).high + scans.get(k).unusual));
+    const max = Math.max(1, ...history.map((h) => h.high + h.unusual));
     const gap = 1;
-    const bw = Math.max(1, (W - gap * (keys.length - 1)) / keys.length);
+    const bw = Math.max(1, (W - gap * (history.length - 1)) / history.length);
 
-    // Baseline grid
     ctx.strokeStyle = 'rgba(255,255,255,0.06)';
     ctx.lineWidth = 1;
     for (let y = 0; y <= 3; y++) {
@@ -126,11 +149,10 @@
       ctx.beginPath(); ctx.moveTo(0, yy); ctx.lineTo(W, yy); ctx.stroke();
     }
 
-    keys.forEach((k, i) => {
-      const s = scans.get(k);
+    history.forEach((h, i) => {
       const x = i * (bw + gap);
-      const hU = (s.unusual / max) * (H - 8);
-      const hH = (s.high / max) * (H - 8);
+      const hU = (h.unusual / max) * (H - 8);
+      const hH = (h.high / max) * (H - 8);
       ctx.fillStyle = 'rgba(245,158,11,0.75)';
       ctx.fillRect(x, H - hU, bw, hU);
       ctx.fillStyle = '#00e5ff';
@@ -138,79 +160,111 @@
     });
   };
 
+  const reasonText = (d) => `${d.ssid || '(hidden)'} · ${d.bssid} — ${d.reasons || 'no reason recorded'}`;
+
   const renderWifi = () => {
-    const rows = wifi.rows;
-    const scans = new Set(rows.map((r) => r.timestamp));
-    const agg = aggregateWifi(rows);
+    const m = wifi.model;
+    const devices = [...m.devices].sort((a, b) => {
+      if (a.confidence !== b.confidence) return a.confidence === 'high' ? -1 : 1;
+      return (b.last_seen || '').localeCompare(a.last_seen || '');
+    });
 
-    $('wifiScans').textContent = scans.size;
-    $('wifiHigh').textContent = agg.filter((r) => r.confidence === 'high').length;
-    $('wifiUnusual').textContent = agg.filter((r) => r.confidence !== 'high').length;
-    $('wifiUnique').textContent = agg.length;
+    $('wifiScans').textContent = m.scanCount || '—';
+    $('wifiHigh').textContent = devices.filter((d) => d.confidence === 'high').length;
+    $('wifiUnusual').textContent = devices.filter((d) => d.confidence !== 'high').length;
+    $('wifiUnique').textContent = devices.length;
 
-    const latest = rows.length ? rows.map((r) => r.timestamp).sort().at(-1) : null;
-    $('wifiLatest').textContent = `latest scan: ${latest ? latest.replace('T', ' ') : '—'}`;
+    const netInfo = m.networksNow != null ? ` · ${m.networksNow} networks in range` : '';
+    $('wifiLatest').textContent = `latest scan: ${m.lastScan ? m.lastScan.replace('T', ' ') : '—'}${netInfo}`;
 
-    drawWifiChart(rows);
+    drawWifiChart(m.history);
 
     const tbody = $('wifiTbody');
     tbody.innerHTML = '';
-    const visible = agg.filter((r) => wifi.filter === 'all' || r.confidence === wifi.filter);
+    const visible = devices.filter((d) => wifi.filter === 'all' || d.confidence === wifi.filter);
     $('wifiEmpty').hidden = visible.length > 0;
 
-    for (const r of visible) {
+    for (const d of visible) {
       const tr = document.createElement('tr');
-      const key = r.bssid || r.ssid;
-      tr.dataset.key = key;
-      const conf = r.confidence === 'high' ? 'high' : 'unusual';
-      const sig = Math.max(0, Math.min(100, parseInt(r.signal_pct, 10) || 0));
-      const isLatest = r.timestamp === latest;
+      const key = d.bssid || d.ssid;
+      const sig = Math.max(0, Math.min(100, parseInt(d.signal_pct, 10) || 0));
+      const isLatest = d.last_seen === m.lastScan;
       tr.innerHTML = `
-        <td><span class="conf-tag ${conf}">${conf.toUpperCase()}</span></td>
-        <td class="ssid" title="${r.ssid}">${r.ssid || '(hidden)'}</td>
-        <td class="dim">${r.bssid || '—'}</td>
+        <td><span class="conf-tag ${d.confidence}">${d.confidence.toUpperCase()}</span></td>
+        <td class="ssid" title="${d.ssid}">${d.ssid || '(hidden)'}</td>
+        <td class="dim">${d.bssid || '—'}</td>
         <td><span class="sig-bar"><span class="sig-track"><span class="sig-fill" style="width:${sig}%"></span></span>${sig}%</span></td>
-        <td class="${isLatest ? '' : 'dim'}">${timeOnly(r.timestamp)}</td>
-        <td class="dim">${r.hits}</td>`;
+        <td class="${isLatest ? '' : 'dim'}">${timeOnly(d.last_seen)}</td>
+        <td class="dim">${d.hits}</td>`;
       if (key === wifi.selectedKey) tr.classList.add('is-selected');
       tr.addEventListener('click', () => {
         wifi.selectedKey = key;
         tbody.querySelectorAll('tr').forEach((x) => x.classList.toggle('is-selected', x === tr));
-        $('wifiReason').textContent = `${r.ssid || '(hidden)'} · ${r.bssid} — ${r.reasons || 'no reason recorded'}`;
+        $('wifiReason').textContent = reasonText(d);
       });
       tbody.appendChild(tr);
     }
+
+    // Keep the reason strip in sync with the selected device as scans update it.
+    if (wifi.selectedKey) {
+      const sel = devices.find((d) => (d.bssid || d.ssid) === wifi.selectedKey);
+      if (sel) $('wifiReason').textContent = reasonText(sel);
+    }
   };
 
-  const loadWifi = async () => {
-    const src = $('wifiSrc').value.trim();
+  const loadWifiSnapshot = async () => {
     try {
-      wifi.rows = await fetchCSV(src);
+      wifi.model = modelFromCSV(await fetchCSV(SNAPSHOT_CSV));
+    } catch {
+      wifi.model = emptyWifiModel();
+    }
+    renderWifi();
+  };
+
+  const wifiBaseUrl = () => {
+    let u = $('wifiUrl').value.trim().replace(/\/+$/, '');
+    if (!u) return '';
+    if (!/^https?:\/\//i.test(u)) u = 'http://' + u;
+    return u.replace(/\/detections\.json$/i, '');
+  };
+
+  const pollWifi = async () => {
+    if (!wifi.base) return;
+    try {
+      const res = await fetch(`${wifi.base}/detections.json?t=${Date.now()}`, { cache: 'no-store' });
+      if (!res.ok) throw new Error(res.status);
+      const snap = await res.json();
+      wifi.model = modelFromLive(snap);
+      wifi.connected = true;
       renderWifi();
-      setLive(wifiDot, wifiLabel, wifi.autoTimer ? 'live' : 'idle', wifi.autoTimer ? 'LIVE · POLLING' : 'STATIC LOG');
-    } catch (err) {
-      wifi.rows = [];
-      renderWifi();
-      setLive(wifiDot, wifiLabel, 'err', `LOAD FAILED · ${err.message}`);
+      setLive(wifiDot, wifiLabel, 'live', `LIVE · SCAN ${snap.scan_count || 0}`);
+    } catch {
+      // Keep whatever is on screen (last live data, or the snapshot) and flag the state.
+      setLive(wifiDot, wifiLabel, 'err', wifi.connected ? 'DETECTOR LOST · RETRYING' : 'DETECTOR UNREACHABLE · SNAPSHOT');
     }
   };
 
-  $('wifiReload').addEventListener('click', loadWifi);
-  $('wifiSrc').addEventListener('keydown', (e) => { if (e.key === 'Enter') loadWifi(); });
+  const connectWifi = () => {
+    wifi.base = wifiBaseUrl();
+    if (!wifi.base) return;
+    setLive(wifiDot, wifiLabel, 'idle', 'CONNECTING…');
+    if (wifi.pollTimer) clearInterval(wifi.pollTimer);
+    wifi.pollTimer = setInterval(pollWifi, 2000);
+    pollWifi();
+  };
 
-  $('wifiAuto').addEventListener('click', (e) => {
-    const btn = e.currentTarget;
-    if (wifi.autoTimer) {
-      clearInterval(wifi.autoTimer);
-      wifi.autoTimer = null;
-      btn.setAttribute('aria-pressed', 'false');
-      setLive(wifiDot, wifiLabel, 'idle', 'STATIC LOG');
-    } else {
-      wifi.autoTimer = setInterval(loadWifi, 5000);
-      btn.setAttribute('aria-pressed', 'true');
-      loadWifi();
-    }
-  });
+  const disconnectWifi = async () => {
+    if (wifi.pollTimer) clearInterval(wifi.pollTimer);
+    wifi.pollTimer = null;
+    wifi.base = '';
+    wifi.connected = false;
+    await loadWifiSnapshot();
+    setLive(wifiDot, wifiLabel, 'idle', 'SNAPSHOT');
+  };
+
+  $('wifiConnect').addEventListener('click', connectWifi);
+  $('wifiDisconnect').addEventListener('click', disconnectWifi);
+  $('wifiUrl').addEventListener('keydown', (e) => { if (e.key === 'Enter') connectWifi(); });
 
   $('wifiFilters').addEventListener('click', (e) => {
     const btn = e.target.closest('button[data-filter]');
@@ -220,8 +274,10 @@
     renderWifi();
   });
 
-  window.addEventListener('resize', () => drawWifiChart(wifi.rows));
-  loadWifi();
+  window.addEventListener('resize', () => drawWifiChart(wifi.model.history));
+
+  // Show the snapshot immediately, then try the live detector.
+  loadWifiSnapshot().then(connectWifi);
 
   // ---------------------------------------------------------------
   // 02 — Camera detector (talks to drone_camera_detector.py --serve PORT)

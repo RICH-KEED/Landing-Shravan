@@ -44,17 +44,27 @@ Usage:
     python drone_wifi_detector.py --watch --interval 2
     python drone_wifi_detector.py --log detections.csv
     python drone_wifi_detector.py --verbose
+    python drone_wifi_detector.py --watch --serve 8091   # live feed for the web console
+
+--serve PORT starts a tiny local HTTP server (stdlib only) exposing
+    /detections.json  current hits, per-device aggregate, per-scan history, stats
+    /status           stats only
+so the SHRAVAN field console (console.html) can show scans as they happen.
 """
 
 import argparse
+import collections
 import csv
 import ctypes
 import datetime
+import json
 import logging
 import re
 import subprocess
 import sys
+import threading
 import time
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 # SSID naming patterns of ordinary, everyday devices. Anything matching
 # one of these is treated as normal background noise and NOT flagged,
@@ -470,6 +480,135 @@ def write_log_row(log_path, net, confidence, reasons):
         ])
 
 
+class ConsoleServer:
+    """
+    Publishes the detector's rolling state over HTTP for the SHRAVAN field
+    console. Purely an observer of what the scanner already collected --
+    it does not touch the Wi-Fi adapter itself.
+    """
+
+    def __init__(self, port, host="0.0.0.0", max_history=400):
+        self.port = port
+        self.host = host
+        self.lock = threading.Lock()
+        self.started = time.time()
+        self.scan_count = 0
+        self.last_scan = None
+        self.current = []                       # hits in the latest scan
+        self.devices = {}                       # bssid -> aggregate
+        self.history = collections.deque(maxlen=max_history)
+        self.info = {}
+        self._server = None
+
+    # -- called from the scan loop ------------------------------------
+    def push_scan(self, networks, hits):
+        now = datetime.datetime.now().isoformat(timespec="seconds")
+        current = []
+        with self.lock:
+            self.scan_count += 1
+            self.last_scan = now
+            for net, confidence, reasons in hits:
+                row = {
+                    "timestamp": now,
+                    "confidence": confidence,
+                    "ssid": net["ssid"],
+                    "bssid": net["bssid"],
+                    "signal_pct": net["signal_pct"],
+                    "reasons": list(reasons),
+                }
+                current.append(row)
+                agg = self.devices.get(net["bssid"])
+                if agg is None:
+                    agg = dict(row, first_seen=now, last_seen=now, hits=0)
+                    self.devices[net["bssid"]] = agg
+                agg.update(
+                    confidence="high" if "high" in (agg["confidence"], confidence) else confidence,
+                    ssid=net["ssid"],
+                    signal_pct=net["signal_pct"],
+                    reasons=list(reasons),
+                    last_seen=now,
+                    timestamp=now,
+                    hits=agg["hits"] + 1,
+                )
+            self.current = current
+            self.history.append({
+                "timestamp": now,
+                "networks": len(networks),
+                "high": sum(1 for h in hits if h[1] == "high"),
+                "unusual": sum(1 for h in hits if h[1] != "high"),
+            })
+
+    def snapshot(self, with_lists=True):
+        with self.lock:
+            # High-confidence first, then most recently seen.
+            devices = sorted(
+                self.devices.values(),
+                key=lambda d: (0 if d["confidence"] == "high" else 1, d["last_seen"]),
+            )
+            devices.sort(key=lambda d: d["last_seen"], reverse=True)
+            devices.sort(key=lambda d: 0 if d["confidence"] == "high" else 1)
+            snap = {
+                "scan_count": self.scan_count,
+                "last_scan": self.last_scan,
+                "uptime_s": round(time.time() - self.started, 1),
+                "networks_now": self.history[-1]["networks"] if self.history else 0,
+                "high_now": self.history[-1]["high"] if self.history else 0,
+                "unusual_now": self.history[-1]["unusual"] if self.history else 0,
+                "devices_total": len(self.devices),
+                **self.info,
+            }
+            if with_lists:
+                snap["current"] = list(self.current)
+                snap["devices"] = devices
+                snap["history"] = list(self.history)
+            return snap
+
+    # -- HTTP -----------------------------------------------------------
+    def start(self):
+        server = self
+
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *_):
+                pass
+
+            def _cors(self):
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.send_header("Cache-Control", "no-store")
+
+            def do_OPTIONS(self):
+                self.send_response(204)
+                self._cors()
+                self.end_headers()
+
+            def do_GET(self):
+                path = self.path.split("?", 1)[0]
+                if path == "/detections.json":
+                    self._json(server.snapshot(with_lists=True))
+                elif path == "/status":
+                    self._json(server.snapshot(with_lists=False))
+                else:
+                    self.send_response(404)
+                    self._cors()
+                    self.end_headers()
+
+            def _json(self, payload):
+                body = json.dumps(payload).encode("utf-8")
+                self.send_response(200)
+                self._cors()
+                self.send_header("Content-Type", "application/json")
+                self.send_header("Content-Length", str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+
+        self._server = ThreadingHTTPServer((self.host, self.port), Handler)
+        self._server.daemon_threads = True
+        threading.Thread(target=self._server.serve_forever, daemon=True).start()
+
+    def stop(self):
+        if self._server:
+            self._server.shutdown()
+
+
 def build_arg_parser():
     parser = argparse.ArgumentParser(
         description="Passively flag unusual nearby Wi-Fi devices (by exclusion of normal device "
@@ -509,6 +648,15 @@ def build_arg_parser():
         "--scan-wait", type=float, default=2.5,
         help="Seconds to wait after triggering an active scan before reading results (default: 2.5)."
     )
+    parser.add_argument(
+        "--serve", type=int, metavar="PORT",
+        help="Also publish live results over HTTP on this port (e.g. 8091) for the SHRAVAN "
+             "field console: /detections.json, /status. Implies --watch."
+    )
+    parser.add_argument(
+        "--serve-host", default="0.0.0.0",
+        help="Interface to bind --serve to (default: 0.0.0.0 = all; use 127.0.0.1 for local only)."
+    )
     return parser
 
 
@@ -521,6 +669,15 @@ def main():
     )
     logger = logging.getLogger("drone_wifi_detector")
     tracker = NetworkTracker(args.stale_after)
+
+    console = None
+    if args.serve:
+        args.watch = True
+        console = ConsoleServer(args.serve, host=args.serve_host)
+        console.info = {"interval_s": args.interval, "stale_after_s": args.stale_after,
+                        "active_scan": not args.no_active_scan}
+        console.start()
+        print(f"Console server on http://{args.serve_host}:{args.serve}/  (/detections.json, /status)")
 
     try:
         while True:
@@ -539,6 +696,9 @@ def main():
 
             print_report(networks, hits, args.verbose)
 
+            if console:
+                console.push_scan(networks, hits)
+
             if args.log:
                 for net, confidence, reasons in hits:
                     if net["bssid"] in new_bssids:
@@ -550,6 +710,9 @@ def main():
             time.sleep(args.interval)
     except KeyboardInterrupt:
         print("\nStopped.")
+    finally:
+        if console:
+            console.stop()
 
 
 if __name__ == "__main__":

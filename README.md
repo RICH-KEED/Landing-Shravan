@@ -23,7 +23,7 @@ evaluator scenario (Wi-Fi drone detection + YOLOv8 camera detection).
 │   └── detections.csv    Snapshot Wi-Fi detection log shown by the console (channel 01)
 ├── assets/               Images, stack icons, satellite/aircraft art
 ├── Shravan/              Field sensing scripts (Python, Windows)
-│   ├── drone_wifi_detector.py     Passive Wi-Fi beacon scanner (netsh), flags unusual SSIDs/OUIs
+│   ├── drone_wifi_detector.py     Passive Wi-Fi beacon scanner (netsh) with --serve HTTP output
 │   ├── drone_camera_detector.py   YOLOv8 drone detector with --serve HTTP output for the console
 │   ├── hotspot_manager.py         Tkinter view of devices joined to the laptop's Mobile Hotspot
 │   ├── detections.csv             Example log produced by drone_wifi_detector.py --log
@@ -45,9 +45,10 @@ npm run build        # production build → dist/  (index, console and orbit pag
 - **Landing page** — `http://127.0.0.1:5173/`. The **Open Console** button in the header
   navigates to the field console.
 - **Field console** — `http://127.0.0.1:5173/console.html`
-  - **01 Wi-Fi Detector** reads a CSV written by `drone_wifi_detector.py --log`.
-    Default source is `data/detections.csv` (the committed snapshot). Point the *LOG SOURCE*
-    field at a live-written file and toggle **AUTO 5s** to poll it during a demo.
+  - **01 Wi-Fi Detector** connects to a running `drone_wifi_detector.py --serve <port>`
+    (default *DETECTOR URL* `http://127.0.0.1:8091`) and polls it every 2 s: scan counter,
+    networks in range, per-device table, hits-per-scan chart. Until a detector is reachable
+    it shows the committed snapshot `public/data/detections.csv` (badge reads **SNAPSHOT**).
     Click a row to see the detector's reason string.
   - **02 Camera Detector** connects to a running `drone_camera_detector.py --serve <port>`.
     It shows the **annotated** MJPEG feed (YOLO boxes drawn), live fps, hit counters and the
@@ -127,13 +128,19 @@ everyday device patterns (phones, ISP routers, printers, TVs) are ignored; anyth
 `unusual`; `unusual` + a drone/IoT keyword or a known drone-vendor MAC OUI is `high`.
 
 ```powershell
-python drone_wifi_detector.py                     # scan once
+python drone_wifi_detector.py                     # scan once, print report
 python drone_wifi_detector.py --watch --interval 3 --log detections.csv
-# to feed the console live:
-python drone_wifi_detector.py --watch --log ..\public\data\detections.csv
+python drone_wifi_detector.py --serve 8091 --interval 3     # live feed for the console (implies --watch)
 ```
 
-CSV columns: `timestamp,confidence,ssid,bssid,signal_pct,reasons`.
+`--serve PORT` exposes (CORS open, `--serve-host 127.0.0.1` to restrict):
+
+| Endpoint | Content |
+|---|---|
+| `/detections.json` | `scan_count`, `last_scan`, `networks_now`, `current[]` (this scan's hits), `devices[]` (per-BSSID aggregate: confidence, signal, reasons, first/last seen, hits), `history[]` (per-scan high/unusual counts) |
+| `/status` | the counters only |
+
+CSV columns (`--log`): `timestamp,confidence,ssid,bssid,signal_pct,reasons`.
 
 ### 2.5 `hotspot_manager.py` — hotspot client viewer
 
@@ -148,18 +155,20 @@ that client's IP (needs admin); nothing is sent over the air.
 ```
 [phone: DroidCam] ──USB/Wi-Fi──► [GPU laptop]  drone_camera_detector.py --serve 8090
                                        │
-                                  hotspot / LAN
+                                  hotspot / LAN ◄── [Wi-Fi laptop]  drone_wifi_detector.py --serve 8091
                                        │
                                [any laptop]  npm run dev  →  console.html
-                                             DETECTOR URL = http://<gpu-laptop-ip>:8090
+                                             panel 02 URL = http://<gpu-laptop-ip>:8090
+                                             panel 01 URL = http://<wifi-laptop-ip>:8091
 ```
 
 1. GPU laptop: start DroidCam client, then the detector with `--serve 8090`.
 2. Allow Python through Windows Firewall on private networks (or
    `netsh advfirewall firewall add rule name=SHRAVAN dir=in action=allow protocol=TCP localport=8090`).
 3. Open the console, enter the GPU laptop's IPv4 in *DETECTOR URL*, click **CONNECT**.
-4. Optionally run `drone_wifi_detector.py --watch --log public/data/detections.csv` on the
-   laptop serving the site and toggle **AUTO 5s** in panel 01.
+4. On any Windows laptop with Wi-Fi, run `drone_wifi_detector.py --serve 8091`, enter that
+   laptop's IP in panel 01's *DETECTOR URL* and click **CONNECT** (port 8091 through the
+   firewall, same as above).
 
 > A Wi-Fi peak alone is never labelled "the drone" — the camera channel is the confirmation.
 

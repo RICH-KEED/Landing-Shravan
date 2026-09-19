@@ -56,7 +56,7 @@
               <p class="panel-src">drone_wifi_detector.py · netsh wlan show networks</p>
             </div>
           </div>
-          <div class="panel-live"><span class="panel-live-dot" id="wifiLiveDot"></span><span id="wifiLiveLabel">STATIC LOG</span></div>
+          <div class="panel-live"><span class="panel-live-dot" id="wifiLiveDot"></span><span id="wifiLiveLabel">SNAPSHOT</span></div>
         </header>
 
         <div class="stat-row">
@@ -91,18 +91,18 @@
             </thead>
             <tbody id="wifiTbody"></tbody>
           </table>
-          <div class="table-empty" id="wifiEmpty" hidden>No rows — run the detector with <code>--log</code> and point the source below at the file.</div>
+          <div class="table-empty" id="wifiEmpty" hidden>No flagged devices yet — run <code>drone_wifi_detector.py --serve 8091</code> and CONNECT; each scan streams in here.</div>
         </div>
 
         <div class="reason-strip" id="wifiReason">Select a row to see why it was flagged.</div>
 
         <footer class="panel-foot">
           <label class="src-field">
-            <span>LOG SOURCE</span>
-            <input type="text" id="wifiSrc" value="data/detections.csv" spellcheck="false">
+            <span>DETECTOR URL (--serve)</span>
+            <input type="text" id="wifiUrl" value="http://127.0.0.1:8091" spellcheck="false">
           </label>
-          <button type="button" class="selector-btn" id="wifiReload">RELOAD</button>
-          <button type="button" class="selector-btn" id="wifiAuto" aria-pressed="false">AUTO 5s</button>
+          <button type="button" class="selector-btn" id="wifiConnect">CONNECT</button>
+          <button type="button" class="selector-btn" id="wifiDisconnect">DISCONNECT</button>
         </footer>
       </section>
 
@@ -127,7 +127,7 @@
               <span></span><span></span><span></span><span></span>
             </div>
             <div class="feed-placeholder-text">
-              <span class="cmd-prompt">$ python drone_camera_detector.py --url 1 --serve 8090</span>
+              <span class="cmd-prompt">$ python drone_camera_detector.py --serve 8090</span>
               <span class="text-dim">Start the detector with --serve, then press CONNECT to mirror its annotated feed here.</span>
             </div>
           </div>
