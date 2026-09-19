@@ -1,0 +1,21 @@
+{
+  "name": "threat-shield-landing",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "icons:build": "node scripts/generate-orbit-icons.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router": "^7.18.4"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.4",
+    "vite": "^7.3.0"
+  }
+}

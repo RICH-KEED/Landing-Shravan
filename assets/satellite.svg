@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280" fill="none" stroke="currentColor">
+  <!-- Satellite Main Propulsion and Sensor Bus -->
+  <g transform="translate(230, 80) rotate(-22)" stroke-width="1.2" stroke="#d1d5db">
+    <!-- Main cylindrical body -->
+    <rect x="-35" y="-18" width="70" height="36" rx="3" fill="#090d16" stroke="#94a3b8"/>
+    <!-- Ring segments and panel joints -->
+    <line x1="-15" y1="-18" x2="-15" y2="18" stroke="#64748b"/>
+    <line x1="10" y1="-18" x2="10" y2="18" stroke="#64748b"/>
+    <!-- Service module / thruster cone -->
+    <path d="M-35,-12 L-48,-8 L-48,8 L-35,12 Z" fill="#060910" stroke="#94a3b8"/>
+    <!-- Main engine nozzle -->
+    <path d="M-48,-5 L-56,-3 L-56,3 L-48,5 Z" fill="#02050b" stroke="#64748b"/>
+    <!-- Forward docking / sensor turret -->
+    <path d="M35,-14 L46,-9 L46,9 L35,14 Z" fill="#0c121e" stroke="#94a3b8"/>
+    <!-- Optical sensor lens / aperture -->
+    <circle cx="43" cy="0" r="4" fill="#38bdf8" stroke="#e2e8f0" stroke-width="1"/>
+    
+    <!-- Star Tracker and Comm Antennas -->
+    <line x1="20" y1="-18" x2="28" y2="-28" stroke="#94a3b8"/>
+    <circle cx="28" cy="-28" r="2" fill="#ffffff" stroke="#94a3b8"/>
+    
+    <line x1="-10" y1="18" x2="-6" y2="30" stroke="#94a3b8"/>
+    <!-- Parabolic Antenna Dish -->
+    <path d="M-12,32 Q-6,26 0,32" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
+    <line x1="-6" y1="28" x2="-6" y2="34" stroke="#e2e8f0"/>
+
+    <!-- Left Solar Array Arm -->
+    <line x1="0" y1="-18" x2="0" y2="-36" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="-75" y="-95" width="150" height="58" fill="#050811" stroke="#cbd5e1" stroke-width="1.2"/>
+    <!-- Solar Cells Grid (Left Array) -->
+    <!-- Horizontal lines -->
+    <line x1="-75" y1="-76" x2="75" y2="-76" stroke="#475569" stroke-width="0.8"/>
+    <line x1="-75" y1="-57" x2="75" y2="-57" stroke="#475569" stroke-width="0.8"/>
+    <!-- Vertical lines -->
+    <line x1="-45" y1="-95" x2="-45" y2="-37" stroke="#475569" stroke-width="0.8"/>
+    <line x1="-15" y1="-95" x2="-15" y2="-37" stroke="#475569" stroke-width="0.8"/>
+    <line x1="15" y1="-95" x2="15" y2="-37" stroke="#475569" stroke-width="0.8"/>
+    <line x1="45" y1="-95" x2="45" y2="-37" stroke="#475569" stroke-width="0.8"/>
+
+    <!-- Right Solar Array Arm -->
+    <line x1="0" y1="18" x2="0" y2="36" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="-75" y="37" width="150" height="58" fill="#050811" stroke="#cbd5e1" stroke-width="1.2"/>
+    <!-- Solar Cells Grid (Right Array) -->
+    <!-- Horizontal lines -->
+    <line x1="-75" y1="56" x2="75" y2="56" stroke="#475569" stroke-width="0.8"/>
+    <line x1="-75" y1="75" x2="75" y2="75" stroke="#475569" stroke-width="0.8"/>
+    <!-- Vertical lines -->
+    <line x1="-45" y1="37" x2="-45" y2="95" stroke="#475569" stroke-width="0.8"/>
+    <line x1="-15" y1="37" x2="-15" y2="95" stroke="#475569" stroke-width="0.8"/>
+    <line x1="15" y1="37" x2="15" y2="95" stroke="#475569" stroke-width="0.8"/>
+    <line x1="45" y1="37" x2="45" y2="95" stroke="#475569" stroke-width="0.8"/>
+  </g>
+
+  <!-- Downlink Telemetry Dashed Beams -->
+  <g stroke="#64748b" stroke-width="1" stroke-dasharray="4, 5" opacity="0.8">
+    <line x1="225" y1="110" x2="50" y2="270" />
+    <line x1="225" y1="110" x2="120" y2="280" />
+    <line x1="225" y1="110" x2="0" y2="240" />
+  </g>
+</svg>

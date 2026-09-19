@@ -1,0 +1,120 @@
+#orbit-root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.orbit-demo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-dark);
+}
+
+.orbit-scene {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.orbit-globe,
+.orbit-ring {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  aspect-ratio: 1;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
+}
+
+.orbit-globe {
+  z-index: 10;
+  width: 300px;
+}
+
+.orbit-globe-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.orbit-ring {
+  border: 1px solid var(--border-subtle);
+}
+
+.orbit-ring-1 { width: 440px; }
+.orbit-ring-2 { width: 600px; }
+.orbit-ring-3 { width: 720px; }
+
+.orbit-position {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 64px;
+  height: 50%;
+  margin-left: -32px;
+  transform-origin: center bottom;
+}
+
+.orbit-icon {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-top: -32px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  background: var(--bg-dark);
+}
+
+.orbit-icon img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.orbit-cw { animation: orbit-cw var(--duration) linear infinite; }
+.orbit-ccw { animation: orbit-ccw var(--duration) linear infinite; }
+.counter-cw { animation: counter-cw var(--duration) linear infinite; }
+.counter-ccw { animation: counter-ccw var(--duration) linear infinite; }
+
+@keyframes orbit-cw {
+  from { transform: rotate(var(--start-angle)); }
+  to { transform: rotate(calc(var(--start-angle) + 360deg)); }
+}
+
+@keyframes orbit-ccw {
+  from { transform: rotate(var(--start-angle)); }
+  to { transform: rotate(calc(var(--start-angle) - 360deg)); }
+}
+
+@keyframes counter-cw {
+  from { transform: rotate(var(--counter-offset)); }
+  to { transform: rotate(calc(var(--counter-offset) - 360deg)); }
+}
+
+@keyframes counter-ccw {
+  from { transform: rotate(var(--counter-offset)); }
+  to { transform: rotate(calc(var(--counter-offset) + 360deg)); }
+}
+
+@media (min-width: 768px) {
+  .orbit-scene { height: 640px; }
+  .orbit-globe { width: 580px; }
+  .orbit-ring-1 { width: 720px; }
+  .orbit-ring-2 { width: 880px; }
+  .orbit-ring-3 { width: 1060px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-position,
+  .orbit-icon { animation-play-state: paused; }
+}

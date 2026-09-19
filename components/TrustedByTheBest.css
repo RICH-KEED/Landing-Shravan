@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+.trusted-section,
+.trusted-section * { box-sizing: border-box; }
+
+.trusted-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  color: #fff;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  background: radial-gradient(circle at 18% 28%, rgba(56, 189, 248, .45) 0%, transparent 65%),
+              radial-gradient(circle at 82% 40%, rgba(37, 99, 235, .5) 0%, transparent 60%),
+              linear-gradient(175deg, #1b7cf4 0%, #258cfb 48%, #1a71e6 100%);
+}
+
+.trusted-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 24px 32px 0;
+}
+.trusted-tag {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-right: 20px;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, .9);
+  font: 400 12px/1.4 'Space Mono', monospace;
+  letter-spacing: .16em;
+}
+.trusted-tag-slash { opacity: .4; font-weight: 300; }
+.trusted-header-line { flex: 1; height: 1px; background: rgba(255, 255, 255, .2); }
+
+.trusted-main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px;
+}
+.trusted-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 32px;
+}
+.trusted-profile { display: flex; flex-direction: column; padding-top: 4px; }
+.trusted-avatar {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  background: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+.trusted-avatar img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.trusted-profile-copy { margin-top: 14px; }
+.trusted-profile h3,
+.trusted-profile p { margin: 0; font-family: 'Space Mono', monospace; text-transform: uppercase; }
+.trusted-profile h3 { font-size: 12px; font-weight: 700; letter-spacing: .1em; }
+.trusted-profile p { margin-top: 4px; color: rgba(255, 255, 255, .7); font-size: 10px; font-weight: 500; letter-spacing: .05em; line-height: 1.4; }
+
+.trusted-quote-row { display: flex; align-items: flex-start; gap: 12px; }
+.trusted-quote-mark {
+  flex: none;
+  margin-top: -4px;
+  color: rgba(255, 255, 255, .95);
+  font: 900 30px/1 Georgia, serif;
+}
+.trusted-quote-row blockquote {
+  margin: 0;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  line-height: 1.24;
+}
+.trusted-typing-cursor {
+  display: inline-block;
+  margin-left: 6px;
+  font-weight: 300;
+  color: #38bdf8;
+  animation: trusted-cursor-blink 1s steps(2, start) infinite;
+}
+@keyframes trusted-cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.trusted-controls { display: flex; align-items: center; gap: 12px; margin-top: 48px; }
+.trusted-controls button {
+  padding: 4px 0;
+  border: 0;
+  color: rgba(255, 255, 255, .75);
+  background: transparent;
+  font: 400 16px/1.5 'Space Mono', monospace;
+  cursor: pointer;
+  transition: color .15s;
+}
+.trusted-controls button:hover { color: #fff; }
+.trusted-controls button:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+.trusted-controls button:disabled { cursor: default; }
+
+.trusted-footer,
+.trusted-partners-band {
+  width: 100%;
+  overflow: hidden;
+  padding: 24px 0 28px;
+  border-top: 1px solid rgba(255, 255, 255, .15);
+  background: rgba(0, 0, 0, .2);
+  display: flex;
+}
+.trusted-marquee {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: trusted-marquee 30s linear infinite;
+}
+.trusted-marquee:hover {
+  animation-play-state: paused;
+}
+.trusted-logo-sequence {
+  display: flex;
+  align-items: center;
+  flex: none;
+  gap: 64px;
+  padding-right: 64px;
+  opacity: .9;
+}
+.trusted-logo { display: flex; flex: none; align-items: center; white-space: nowrap; color: #fff; }
+.trusted-logo svg { display: block; flex: none; }
+.trusted-logo-stack { gap: 10px; font-size: 16px; font-weight: 700; letter-spacing: -.025em; }
+.trusted-logo-stack svg { width: 24px; height: 24px; }
+.trusted-logo-ubs { gap: 8px; font-size: 18px; font-weight: 700; letter-spacing: .05em; }
+.trusted-logo-ubs svg { width: 28px; height: 28px; }
+.trusted-logo-barclays { font-size: 16px; font-weight: 900; letter-spacing: .05em; }
+.trusted-logo-tesla { font: 600 16px/1.5 'Space Mono', monospace; letter-spacing: .38em; }
+.trusted-logo-nestle { flex-direction: column; font: 700 12px/1 Georgia, serif; letter-spacing: -.025em; }
+.trusted-logo-nestle svg { width: 24px; height: 20px; margin-bottom: 2px; }
+.trusted-logo-stripe { font-size: 20px; font-weight: 700; letter-spacing: -.05em; }
+
+@keyframes trusted-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (min-width: 640px) {
+  .trusted-quote-mark { font-size: 36px; }
+  .trusted-quote-row blockquote { font-size: 30px; }
+}
+@media (min-width: 768px) {
+  .trusted-header { padding: 28px 56px 0; }
+  .trusted-tag { font-size: 13px; }
+  .trusted-main { padding: 48px 56px; }
+  .trusted-content { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .trusted-profile { grid-column: span 3; }
+  .trusted-quote-row { grid-column: span 9; gap: 16px; }
+  .trusted-avatar { width: 80px; height: 80px; }
+  .trusted-profile h3 { font-size: 14px; }
+  .trusted-profile p { font-size: 11px; }
+  .trusted-quote-mark { font-size: 44px; margin-top: -6px; }
+  .trusted-quote-row blockquote { font-size: 36px; line-height: 1.22; }
+  .trusted-controls { margin-top: 64px; }
+  .trusted-controls button { font-size: 18px; }
+  .trusted-logo-sequence { gap: 96px; padding-right: 96px; }
+  .trusted-logo-stack, .trusted-logo-barclays, .trusted-logo-tesla { font-size: 18px; }
+  .trusted-logo-ubs { font-size: 20px; }
+  .trusted-logo-stripe { font-size: 24px; }
+}
+@media (min-width: 1024px) {
+  .trusted-content { gap: 48px; }
+  .trusted-quote-row blockquote { font-size: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trusted-marquee { animation: none; }
+}
